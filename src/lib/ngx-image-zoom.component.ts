@@ -12,7 +12,7 @@ export interface Coord {
 })
 export class NgxImageZoomComponent implements OnInit, OnChanges, OnDestroy {
 
-    private static readonly validZoomModes: string[] = ['hover', 'toggle', 'click', 'toggle-click', 'hover-freeze'];
+    private static readonly validZoomModes: string[] = ['hover', 'toggle', 'click', 'toggle-click', 'toggle-freeze', 'hover-freeze'];
 
     @ViewChild('zoomContainer', { static: true }) zoomContainer !: ElementRef;
     @ViewChild('imageThumbnail', { static: true }) imageThumbnail !: ElementRef;
