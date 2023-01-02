@@ -7,7 +7,7 @@
     <img
         #imageThumbnail
         class="ngxImageZoomThumbnail"
-        [alt]="altText"
+        alt="{{altText}}"
         [title]="titleText"
         [src]="thumbImage"
         (load)="onThumbImageLoaded()"
@@ -28,7 +28,7 @@
         <img
             #fullSizeImage
             class="ngxImageZoomFull"
-            [alt]="altText"
+            alt="{{altText}}"
             [title]="titleText"
             [src]="fullImage"
             (load)="onFullImageLoaded()"

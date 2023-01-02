@@ -203,12 +203,19 @@ export class NgxImageZoomComponent implements OnInit, OnChanges, OnDestroy {
                     this.renderer.listen(nativeElement, 'mousemove', (event) => this.clickMouseMove(event))
                 );
                 break;
+            case 'toggle-freeze':
+                this.eventListeners.push(
+                    this.renderer.listen(nativeElement, 'mouseenter', (event) => this.toggleFreezeMouseEnter(event)),
+                    this.renderer.listen(nativeElement, 'mouseleave', () => this.toggleFreezeMouseLeave()),
+                    this.renderer.listen(nativeElement, 'mousemove', (event) => this.toggleFreezeMouseMove(event)),
+                    this.renderer.listen(nativeElement, 'click', (event) => this.toggleFreezeClick(event))
+                );
             case 'hover-freeze':
                 this.eventListeners.push(
                     this.renderer.listen(nativeElement, 'mouseenter', (event) => this.hoverFreezeMouseEnter(event)),
-                    this.renderer.listen(nativeElement, 'mouseleave', () => this.hoverFreezeMouseLeave()),
-                    this.renderer.listen(nativeElement, 'mousemove', (event) => this.hoverFreezeMouseMove(event)),
-                    this.renderer.listen(nativeElement, 'click', (event) => this.hoverFreezeClick(event))
+                    this.renderer.listen(nativeElement, 'mouseleave', () => this.toggleFreezeMouseLeave()),
+                    this.renderer.listen(nativeElement, 'mousemove', (event) => this.toggleFreezeMouseMove(event)),
+                    this.renderer.listen(nativeElement, 'click', (event) => this.toggleFreezeClick(event))
                 );
         }
 
@@ -328,27 +335,33 @@ export class NgxImageZoomComponent implements OnInit, OnChanges, OnDestroy {
     }
 
     /**
-     * Hover freeze mode
+     * Toggle freeze mode
      */
-    private hoverFreezeMouseEnter(event: MouseEvent) {
+    private toggleFreezeMouseEnter(event: MouseEvent) {
         if (this.zoomingEnabled && !this.zoomFrozen) {
             this.zoomOn(event);
         }
     }
 
-    private hoverFreezeMouseLeave() {
+    private hoverFreezeMouseEnter(event: MouseEvent) {
+        if (!this.zoomFrozen) {
+            this.zoomOn(event);
+        }
+    }
+
+    private toggleFreezeMouseLeave() {
         if (this.zoomingEnabled && !this.zoomFrozen) {
             this.zoomOff();
         }
     }
 
-    private hoverFreezeMouseMove(event: MouseEvent) {
+    private toggleFreezeMouseMove(event: MouseEvent) {
         if (this.zoomingEnabled && !this.zoomFrozen) {
             this.calculateZoomPosition(event);
         }
     }
 
-    private hoverFreezeClick(event: MouseEvent) {
+    private toggleFreezeClick(event: MouseEvent) {
         if (this.zoomingEnabled && this.zoomFrozen) {
             this.zoomFrozen = false;
             this.zoomOff();
