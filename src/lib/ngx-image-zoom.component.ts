@@ -209,6 +209,7 @@ export class NgxImageZoomComponent implements OnInit, OnChanges, OnDestroy {
                     this.renderer.listen(nativeElement, 'mousemove', (event) => this.toggleFreezeMouseMove(event)),
                     this.renderer.listen(nativeElement, 'click', (event) => this.toggleFreezeClick(event))
                 );
+                break;
             case 'hover-freeze':
                 this.eventListeners.push(
                     this.renderer.listen(nativeElement, 'mouseenter', (event) => this.hoverFreezeMouseEnter(event)),
@@ -216,6 +217,7 @@ export class NgxImageZoomComponent implements OnInit, OnChanges, OnDestroy {
                     this.renderer.listen(nativeElement, 'mousemove', (event) => this.toggleFreezeMouseMove(event)),
                     this.renderer.listen(nativeElement, 'click', (event) => this.hoverFreezeClick(event))
                 );
+                break;
         }
 
         if (this.enableScrollZoom) {
