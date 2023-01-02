@@ -1,7 +1,7 @@
 {
   "name": "@thinkam/ngx-image-zoom",
   "description": "'Unofficial' package that implements 'toggle-freeze' as was 'hover-freeze' and does 'hover-freeze' without needing to click to zoom: Whenever the mouse cursor moves over the thumbnail it will show the zoomed image, first click freezes the zoomed image where it is, second click restores thumbnail.",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "scripts": {
     "build": "ng build ngx-image-zoom",
     "build:release": "ng build ngx-image-zoom --configuration production",
