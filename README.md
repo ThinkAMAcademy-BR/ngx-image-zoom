@@ -90,7 +90,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import the library
-import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { NgxImageZoomModule } from '@thinkam/ngx-image-zoom';
 
 @NgModule({
   declarations: [
