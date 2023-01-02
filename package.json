@@ -1,69 +1,68 @@
 {
-    "name": "@thinkam.net/ngx-image-zoom",
-    "description": "'Unofficial' package that implements 'toggle-freeze' as was 'hover-freeze' and does 'hover-freeze' without needing to click to zoom: Whenever the mouse cursor moves over the thumbnail it will show the zoomed image, first click freezes the zoomed image where it is, second click restores thumbnail.",
-    "version": "1.0.2",
-    "scripts": {
-        "build": "ng build ngx-image-zoom",
-        "build:release": "ng build ngx-image-zoom --configuration production",
-        "build:watch": "ng build ngx-image-zoom --watch",
-        "ng": "ng",
-        "lint": "ng lint",
-        "release": "npm run build:release && npm publish dist/",
-        "release:beta": "npm run build:release && npm publish dist/ --tag beta",
-        "start": "ng serve",
-        "test": "ng test"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://www.github.com/ThinkAMAcademy-BR/ngx-image-zoom"
-    },
-    "author": {
-        "name": "Mathias Wittlock",
-        "email": "1336118+wittlock@users.noreply.github.com"
-    },
-    "keywords": [
-        "angular",
-        "angular component",
-        "image zoom"
-    ],
-    "license": "MIT",
-    "bugs": {
-        "url": "https://www.github.com/ThinkAMAcademy-BR/ngx-image-zoom/issues"
-    },
-    "peerDependencies": {},
-    "dependencies": {
-        "tslib": "^2.0.0"
-    },
-    "devDependencies": {
-        "@angular-devkit/build-angular": "~13.3.4",
-        "@angular/animations": "~13.3.5",
-        "@angular/cli": "~13.3.4",
-        "@angular/common": "~13.3.5",
-        "@angular/compiler": "~13.3.5",
-        "@angular/compiler-cli": "~13.3.5",
-        "@angular/core": "~13.3.5",
-        "@angular/forms": "~13.3.5",
-        "@angular/language-service": "~13.3.5",
-        "@angular/platform-browser": "~13.3.5",
-        "@angular/platform-browser-dynamic": "~13.3.5",
-        "@angular/router": "~13.3.5",
-        "@types/node": "^12.11.1",
-        "@types/jasmine": "~3.6.0",
-        "@types/jasminewd2": "~2.0.3",
-        "codelyzer": "^6.0.0",
-        "jasmine-core": "~3.6.0",
-        "jasmine-spec-reporter": "~5.0.0",
-        "karma": "~6.3.19",
-        "karma-chrome-launcher": "~3.1.0",
-        "karma-coverage-istanbul-reporter": "~3.0.2",
-        "karma-jasmine": "~4.0.0",
-        "karma-jasmine-html-reporter": "^1.5.0",
-        "ng-packagr": "^13.3.1",
-        "protractor": "~7.0.0",
-        "rxjs": "~6.5.4",
-        "ts-node": "~8.3.0",
-        "tslint": "~6.1.0",
-        "typescript": "~4.6.3",
-        "zone.js": "~0.11.4"
-    }
+  "name": "@thinkam/ngx-image-zoom",
+  "description": "'Unofficial' package that implements 'toggle-freeze' as was 'hover-freeze' and does 'hover-freeze' without needing to click to zoom: Whenever the mouse cursor moves over the thumbnail it will show the zoomed image, first click freezes the zoomed image where it is, second click restores thumbnail.",
+  "version": "1.0.5",
+  "scripts": {
+    "build": "ng build ngx-image-zoom",
+    "build:release": "ng build ngx-image-zoom --configuration production",
+    "build:watch": "ng build ngx-image-zoom --watch",
+    "ng": "ng",
+    "lint": "ng lint",
+    "release": "npm run build:release && npm publish dist/",
+    "release:beta": "npm run build:release && npm publish dist/ --tag beta",
+    "start": "ng serve",
+    "test": "ng test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThinkAMAcademy-BR/ngx-image-zoom.git"
+  },
+  "author": "Mathias Wittlock <1336118+wittlock@users.noreply.github.com>",
+  "keywords": [
+    "angular",
+    "angular component",
+    "image zoom"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://www.github.com/ThinkAMAcademy-BR/ngx-image-zoom/issues"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~13.3.4",
+    "@angular/animations": "~13.3.5",
+    "@angular/cli": "~13.3.4",
+    "@angular/common": "~13.3.5",
+    "@angular/compiler": "~13.3.5",
+    "@angular/compiler-cli": "~13.3.5",
+    "@angular/core": "~13.3.5",
+    "@angular/forms": "~13.3.5",
+    "@angular/language-service": "~13.3.5",
+    "@angular/platform-browser": "~13.3.5",
+    "@angular/platform-browser-dynamic": "~13.3.5",
+    "@angular/router": "~13.3.5",
+    "@types/node": "^12.11.1",
+    "@types/jasmine": "~3.6.0",
+    "@types/jasminewd2": "~2.0.3",
+    "codelyzer": "^6.0.0",
+    "jasmine-core": "~3.6.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~6.3.19",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^13.3.1",
+    "protractor": "~7.0.0",
+    "rxjs": "~6.5.4",
+    "ts-node": "~8.3.0",
+    "tslint": "~6.1.0",
+    "typescript": "~4.6.3",
+    "zone.js": "~0.11.4"
+  },
+  "homepage": "https://github.com/ThinkAMAcademy-BR/ngx-image-zoom#readme",
+  "main": "karma.conf.js"
 }

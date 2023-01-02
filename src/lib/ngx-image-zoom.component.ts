@@ -205,7 +205,6 @@ export class NgxImageZoomComponent implements OnInit, OnChanges, OnDestroy {
                 break;
             case 'toggle-freeze':
                 this.eventListeners.push(
-                    this.renderer.listen(nativeElement, 'mouseenter', (event) => this.toggleFreezeMouseEnter(event)),
                     this.renderer.listen(nativeElement, 'mouseleave', () => this.toggleFreezeMouseLeave()),
                     this.renderer.listen(nativeElement, 'mousemove', (event) => this.toggleFreezeMouseMove(event)),
                     this.renderer.listen(nativeElement, 'click', (event) => this.toggleFreezeClick(event))
@@ -215,7 +214,7 @@ export class NgxImageZoomComponent implements OnInit, OnChanges, OnDestroy {
                     this.renderer.listen(nativeElement, 'mouseenter', (event) => this.hoverFreezeMouseEnter(event)),
                     this.renderer.listen(nativeElement, 'mouseleave', () => this.toggleFreezeMouseLeave()),
                     this.renderer.listen(nativeElement, 'mousemove', (event) => this.toggleFreezeMouseMove(event)),
-                    this.renderer.listen(nativeElement, 'click', (event) => this.toggleFreezeClick(event))
+                    this.renderer.listen(nativeElement, 'click', (event) => this.hoverFreezeClick(event))
                 );
         }
 
@@ -365,6 +364,17 @@ export class NgxImageZoomComponent implements OnInit, OnChanges, OnDestroy {
         if (this.zoomingEnabled && this.zoomFrozen) {
             this.zoomFrozen = false;
             this.zoomOff();
+        } else if (this.zoomingEnabled) {
+            this.zoomFrozen = true;
+            this.changeDetectorRef.markForCheck();
+        } else {
+            this.zoomOn(event);
+        }
+    }
+
+    private hoverFreezeClick(event: MouseEvent) {
+        if (this.zoomingEnabled && this.zoomFrozen) {
+            this.zoomFrozen = false;
         } else if (this.zoomingEnabled) {
             this.zoomFrozen = true;
             this.changeDetectorRef.markForCheck();
