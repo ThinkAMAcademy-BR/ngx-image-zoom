@@ -15,7 +15,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://www.github.com/wittlock/ngx-image-zoom"
+        "url": "https://www.github.com/ThinkAMAcademy-BR/ngx-image-zoom"
     },
     "author": {
         "name": "Mathias Wittlock",
@@ -28,7 +28,7 @@
     ],
     "license": "MIT",
     "bugs": {
-        "url": "https://www.github.com/wittlock/ngx-image-zoom/issues"
+        "url": "https://www.github.com/ThinkAMAcademy-BR/ngx-image-zoom/issues"
     },
     "peerDependencies": {},
     "dependencies": {
